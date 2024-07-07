@@ -1,6 +1,8 @@
 // import Component from "./starter/02-props";
 // import Component from "./starter/03-state";
-import Component from "./starter/04-events";
+// import Component from "./starter/04-events";
+import Component from "./starter/05-challenge";
+
 
 function App() {
   return (
@@ -10,7 +12,8 @@ function App() {
         <h2>Hello </h2>
       </Component>
       <Component name='peter'id={123}></Component> */}
-      <Component></Component>
+      <Component type='basic' name='susan' email='susan@gmail.com'></Component>
+      <Component type='advanced' name='Masu' ></Component>
     </main>
   );
 }
