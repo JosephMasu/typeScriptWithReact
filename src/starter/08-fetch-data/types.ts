@@ -14,13 +14,12 @@ export const tourSchema = z.object({
   
   export type Tour = z.infer<typeof tourSchema>;
   //using axios
-  export const fetchTours = async():Promise<Tour[]>=>{
-    const response = await axios.get<Tour[]>(url)
+  export const fetchTours = async (): Promise<Tour[]> => {
+    const response = await axios.get<Tour[]>(url);
     const result = tourSchema.array().safeParse(response.data);
-        if (!result.success) {
-          console.log(result.error.message);
-          throw new Error('failed to parse data');
-          
-        }
-        return result.data;
-  }
+    if (!result.success) {
+      throw new Error('Parsing failed');
+    }
+    return result.data;
+  };
+  
