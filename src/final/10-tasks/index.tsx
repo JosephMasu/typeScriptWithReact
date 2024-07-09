@@ -8,6 +8,7 @@ function loadTasks(): Task[] {
   return storedTasks ? JSON.parse(storedTasks) : [];
 }
 
+
 function updateStorage(tasks: Task[]): void {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
