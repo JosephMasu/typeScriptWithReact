@@ -1,5 +1,4 @@
 import { type Task } from './types';
-
 type ListProps = {
   tasks: Task[];
   toggleTask: ({ id }: { id: string }) => void;
